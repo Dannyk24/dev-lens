@@ -1,0 +1,84 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    background: transparent;
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.app-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-logo:hover .logo-icon {
+    translate: 0 -3px;
+}
+
+.logo-icon {
+    padding: 5px 12px;
+    background-color: var(--accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-md);
+    transition: var(--general-transition);
+    box-shadow: var(--shadow-lg);
+}
+
+.app-logo span {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.logo-icon svg {
+    stroke: white;
+    width: 14px;
+    stroke-width: 2.6;
+}
+
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icon {
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-subtle);
+    transition: var(--general-transition);
+}
+
+.header-icon svg {
+    width: 16px;
+    stroke: var(--text-2);
+}
+
+.header-icon:hover {
+    border: 1px solid var(--accent);
+    cursor: pointer;
+}
+
+.header-icon:hover svg {
+    stroke: var(--accent);
+}
+
+@media(max-width:768px) {
+    .app-logo span {
+        display: none;
+    }
+}

@@ -1,21 +1,29 @@
 import { CodeXml, Moon, ExternalLink } from "lucide-react";
+import { Link } from "react-router";
+import "./Navbar.css";
 
 function Navbar() {
   return (
     <header>
       <div className="header-left">
         <div className="app-logo">
-          <div className="logo-icon">
+          <Link href="/" className="logo-icon">
             <CodeXml />
-          </div>
+          </Link>
           <span>GitHub Explorer</span>
         </div>
+      </div>
+      <div className="header-right">
         <div className="header-icon">
           <Moon />
         </div>
-        <div className="header-icon">
+        <a
+          className="header-icon"
+          href="https://www.github.com"
+          target="_blank"
+        >
           <ExternalLink />
-        </div>
+        </a>
       </div>
     </header>
   );
