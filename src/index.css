@@ -72,11 +72,13 @@ body {
   transition: var(--general-transition);
   cursor: pointer;
   font-family: var(--secondary-font);
+  text-transform: capitalize;
 }
 
 .primary-cta {
   background-color: var(--accent);
   color: white;
+  box-shadow: var(--shadow-accent);
 }
 
 .primary-cta:hover {
@@ -91,4 +93,34 @@ body {
 
 input:focus {
   outline: 1px solid var(--accent);
+}
+
+.section-header {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.section-subheader {
+  font-size: 0.9rem;
+  color: var(--text-3);
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+.display-card {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: var(--general-transition);
+}
+
+.display-card:hover {
+  box-shadow: var(--shadow-lg);
+  translate: 0 -4px;
+}
+
+@media(max-width:550px) {
+  body {
+    padding: 140px 20px;
+  }
 }
