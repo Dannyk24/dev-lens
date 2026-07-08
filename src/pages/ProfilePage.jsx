@@ -1,0 +1,5 @@
+function ProfilePage() {
+  return <div className="profile-page">Profile Page</div>;
+}
+
+export default ProfilePage;
