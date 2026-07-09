@@ -1,0 +1,25 @@
+.back-button {
+    display: flex;
+    align-items: center;
+    color: var(--text-2);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.back-button span {
+    transition: var(--general-transition);
+    font-size: 1rem;
+}
+
+.back-button:hover span {
+    translate: -3px 0;
+}
+
+.back-button:hover svg {
+    translate: -5px 0;
+}
+
+.back-button svg {
+    width: 20px;
+    transition: var(--general-transition);
+}

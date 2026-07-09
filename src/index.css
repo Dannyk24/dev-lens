@@ -55,7 +55,7 @@ body {
   font-family: var(--primary-font);
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
-  padding: 120px 40px;
+  padding: 100px 40px;
 }
 
 .cta {
