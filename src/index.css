@@ -189,8 +189,8 @@ input:focus {
   color: var(--text-3);
 }
 
-@media(max-width:550px) {
+@media(max-width:768px) {
   body {
-    padding: 140px 20px;
+    padding: 100px 20px;
   }
 }
