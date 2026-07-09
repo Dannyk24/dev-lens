@@ -1,8 +1,8 @@
 import { ExternalLink, Dot, Share2 } from "lucide-react";
-import Navbar from "../components/Navbar";
-import BackButton from "../components/ui/BackButton";
-import ProfileCard from "../components/ProfileCard";
-import ProfileOverviewTab from "../components/ProfileOverviewTab";
+import Navbar from "../../components/Navbar";
+import BackButton from "../../components/ui/BackButton";
+import ProfileCard from "./ProfileCard";
+import ProfileOverviewTab from "./ProfileOverviewTab";
 import "./ProfilePage.css";
 
 function ProfilePage() {

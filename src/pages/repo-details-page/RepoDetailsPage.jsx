@@ -11,10 +11,10 @@ import {
   Users,
   Clock,
 } from "lucide-react";
-import Navbar from "../components/Navbar";
-import BackButton from "../components/ui/BackButton";
+import Navbar from "../../components/Navbar";
+import BackButton from "../../components/ui/BackButton";
 import "./RepoDetailsPage.css";
-import RepoCard from "../components/RepoCard";
+import RepoCard from "../../components/RepoCard";
 
 function RepoDetailsPage() {
   return (

@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
-import { SearchBar } from "../components/SearchBar";
-import DeveloperCard from "../components/DeveloperCard";
+import Navbar from "../../components/Navbar";
+import { SearchBar } from "./SearchBar";
+import DeveloperCard from "../../components/DeveloperCard";
 import "./HomePage.css";
 
 function HomePage() {

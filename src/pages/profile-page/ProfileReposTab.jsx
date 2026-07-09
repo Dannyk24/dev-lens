@@ -1,4 +1,4 @@
-import RepoCard from "./RepoCard";
+import RepoCard from "../../components/RepoCard";
 import "./ProfileReposTab.css";
 
 function ProfileReposTab() {

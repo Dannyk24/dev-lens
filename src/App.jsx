@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
-import HomePage from "./pages/HomePage";
-import RepoDetailsPage from "./pages/RepoDetailsPage";
-import ProfilePage from "./pages/ProfilePage";
+import HomePage from "./pages/homepage/HomePage";
+import RepoDetailsPage from "./pages/repo-details-page/RepoDetailsPage";
+import ProfilePage from "./pages/profile-page/ProfilePage";
 import PageNotFound from "./pages/PageNotFound";
 
 import "./App.css";

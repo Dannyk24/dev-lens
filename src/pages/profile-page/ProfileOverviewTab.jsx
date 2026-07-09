@@ -1,4 +1,4 @@
-import RepoCard from "../components/RepoCard";
+import RepoCard from "../../components/RepoCard";
 import { Book, GitFork, Users } from "lucide-react";
 import "./ProfileOverviewTab.css";
 
