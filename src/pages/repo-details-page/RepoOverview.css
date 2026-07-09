@@ -1,0 +1,42 @@
+.repo-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.repo-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border-right: 1px solid var(--border);
+    gap: 8px;
+    height: 100%;
+}
+
+.repo-stat svg {
+    width: 18px;
+    stroke: var(--accent);
+}
+
+.repo-stat-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.repo-stat-category {
+    font-size: 0.7rem;
+    color: var(--text-3);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.repo-stat-dot-language-marker {
+    width: 16px;
+    height: 16px;
+    background-color: orange;
+    border-radius: 3000px;
+}

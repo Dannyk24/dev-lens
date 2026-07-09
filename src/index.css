@@ -189,6 +189,11 @@ input:focus {
   color: var(--text-3);
 }
 
+.card-header {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 @media(max-width:768px) {
   body {
     padding: 100px 20px;

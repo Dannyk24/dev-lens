@@ -1,0 +1,23 @@
+.repo-license-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.license-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: var(--text-2);
+
+}
+
+.license-container svg {
+    width: 14px;
+    stroke: var(--text-2);
+}

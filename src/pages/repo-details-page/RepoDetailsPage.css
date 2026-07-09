@@ -76,49 +76,6 @@
     flex-wrap: wrap;
 }
 
-.repo-overview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    align-items: center;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-}
-
-.repo-stat {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 40px;
-    border-right: 1px solid var(--border);
-    gap: 8px;
-    height: 100%;
-}
-
-.repo-stat svg {
-    width: 18px;
-    stroke: var(--accent);
-}
-
-.repo-stat-value {
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.repo-stat-category {
-    font-size: 0.7rem;
-    color: var(--text-3);
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.repo-stat-dot-language-marker {
-    width: 16px;
-    height: 16px;
-    background-color: orange;
-    border-radius: 3000px;
-}
-
 .repo-topic-badges-container {
     display: flex;
     align-items: center;
@@ -148,124 +105,10 @@
     gap: 20px;
 }
 
-.readme-container {
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    overflow: hidden;
-    height: 100%;
-    max-height: 400px;
-}
-
-.readme-header-container {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    width: 100%;
-    background-color: var(--bg-muted);
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-2);
-}
-
-.readme-header-container svg {
-    width: 15px;
-    stroke: var(--text-3);
-}
-
-.repo-readme {
-    padding: 20px;
-    line-height: 32px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-2);
-    overflow-y: scroll;
-    height: 90%;
-}
-
-.repo-readme::-webkit-scrollbar {
-    width: 3px;
-}
-
-.repo-readme::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
-    border-radius: 10px 0 0 10px;
-}
-
 #repo-information-main-container .right {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.repo-license-container,
-.top-contributors-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-}
-
-.card-header {
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-
-.license-container {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    color: var(--text-2);
-
-}
-
-.license-container svg {
-    width: 14px;
-    stroke: var(--text-2);
-}
-
-.top-contributors {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.top-contributor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.top-contributor .left {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.contributor-avatar {
-    width: 35px;
-    height: 35px;
-    border: 1px solid var(--border);
-    border-radius: 3000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-}
-
-.contributor-name {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--text-2);
-}
-
-.top-contributor .right {
-    font-size: 0.7rem;
-    color: var(--text-3);
 }
 
 .repo-stat-display-cards {
