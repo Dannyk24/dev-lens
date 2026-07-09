@@ -1,0 +1,89 @@
+.profile-shell {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    padding-top: 20px;
+    align-items: start;
+}
+
+.profile-main .profile-name {
+    font-size: 1.4rem;
+}
+
+.profile-link-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.view-on-github-link {
+    display: flex;
+    align-items: center;
+    color: var(--accent);
+    text-decoration: none;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.view-on-github-link svg {
+    width: 16px;
+}
+
+.year-joined {
+    font-size: 0.8rem;
+    color: var(--text-3);
+}
+
+.share-profile-cta {
+    padding: 6px 12px;
+    margin-left: 10px;
+}
+
+.profile-tabs-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.tab-selectors-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.tab-selector-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.tab-selector-container:hover span {
+    color: var(--text-1);
+}
+
+.tab-selector-container span {
+    font-size: 0.9rem;
+    color: var(--text-3);
+    font-weight: 500;
+    transition: var(--general-transition);
+}
+
+.active-tab span {
+    color: var(--text-1);
+}
+
+.active-tab .active-tab-line-indicator {
+    background-color: var(--accent);
+    width: 100%;
+}
+
+.active-tab-line-indicator {
+    height: 2px;
+    width: 100%;
+    border-radius: 3000px;
+    transition: var(--general-transition);
+    width: 0px;
+    justify-self: center;
+}

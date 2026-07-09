@@ -21,7 +21,7 @@ function HomePage() {
           <SearchBar />
         </div>
         <div className="featured-developers-section">
-          <h2 className="section-header">Featured Developers</h2>
+          <h2 className="section-header-lg">Featured Developers</h2>
           <p className="section-subheader">
             Active contributors ranked by recent impact
           </p>

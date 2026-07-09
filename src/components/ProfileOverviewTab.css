@@ -1,0 +1,58 @@
+.profile-overview-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.stat-display-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.stat-display-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-display-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-display-card-icon-container {
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-muted);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.stat-display-card-icon-container svg {
+    width: 16px;
+    stroke: var(--accent);
+}
+
+.stat-display-card-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stat-display-card-category {
+    font-size: 0.9rem;
+    color: var(--text-3);
+}
+
+#most-starred-repo .repository-card {
+    margin-top: 20px;
+}
+
+.recent-repos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
