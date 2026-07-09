@@ -1,5 +1,5 @@
 import RepoCard from "../components/RepoCard";
-import { Book } from "lucide-react";
+import { Book, GitFork, Users } from "lucide-react";
 import "./ProfileOverviewTab.css";
 
 function ProfileOverviewTab() {
@@ -11,28 +11,23 @@ function ProfileOverviewTab() {
             <Book />
           </div>
           <span className="stat-display-card-value">55</span>
-          <span className="stat-display-card-category">Total repoistories</span>
+          <span className="stat-display-card-category">
+            Public repoistories
+          </span>
         </div>
         <div className="display-card stat-display-card">
           <div className="stat-display-card-icon-container">
-            <Book />
+            <GitFork />
           </div>
-          <span className="stat-display-card-value">55</span>
-          <span className="stat-display-card-category">Total repoistories</span>
+          <span className="stat-display-card-value">748</span>
+          <span className="stat-display-card-category">Total forks</span>
         </div>
         <div className="display-card stat-display-card">
           <div className="stat-display-card-icon-container">
-            <Book />
+            <Users />
           </div>
-          <span className="stat-display-card-value">55</span>
-          <span className="stat-display-card-category">Total repoistories</span>
-        </div>
-        <div className="display-card stat-display-card">
-          <div className="stat-display-card-icon-container">
-            <Book />
-          </div>
-          <span className="stat-display-card-value">55</span>
-          <span className="stat-display-card-category">Total repoistories</span>
+          <span className="stat-display-card-value">2.1k</span>
+          <span className="stat-display-card-category">Followers</span>
         </div>
       </div>
       <section id="most-starred-repo">

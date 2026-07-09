@@ -2,6 +2,7 @@ import { ExternalLink, Dot, Share2 } from "lucide-react";
 import Navbar from "../components/Navbar";
 import BackButton from "../components/ui/BackButton";
 import ProfileCard from "../components/ProfileCard";
+import ProfileOverviewTab from "../components/ProfileOverviewTab";
 import "./ProfilePage.css";
 
 function ProfilePage() {
@@ -30,11 +31,11 @@ function ProfilePage() {
             </div>
             <div className="profile-tabs-container">
               <div className="tab-selectors-container">
-                <div className="tab-selector-container">
+                <div className="tab-selector-container active-tab">
                   <span>Overview</span>
                   <div className="active-tab-line-indicator"></div>
                 </div>
-                <div className="tab-selector-container active-tab">
+                <div className="tab-selector-container">
                   <span>Repositories</span>
                   <div className="active-tab-line-indicator"></div>
                 </div>
@@ -45,6 +46,7 @@ function ProfilePage() {
               </div>
               <div className="decorative-line tab-selector-underline"></div>
             </div>
+            <ProfileOverviewTab />
           </div>
         </div>
       </div>

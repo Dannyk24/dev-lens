@@ -154,6 +154,41 @@ input:focus {
   align-items: center;
 }
 
+.stat-display-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-display-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-display-card-icon-container {
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.stat-display-card-icon-container svg {
+  width: 16px;
+  stroke: var(--accent);
+}
+
+.stat-display-card-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-display-card-category {
+  font-size: 0.9rem;
+  color: var(--text-3);
+}
+
 @media(max-width:550px) {
   body {
     padding: 140px 20px;
