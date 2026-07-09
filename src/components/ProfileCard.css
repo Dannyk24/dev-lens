@@ -3,6 +3,12 @@
     top: 5rem;
 }
 
+@media(max-width:768px) {
+    .profile-sidebar {
+        position: static;
+    }
+}
+
 .profile-card {
     display: flex;
     flex-direction: column;

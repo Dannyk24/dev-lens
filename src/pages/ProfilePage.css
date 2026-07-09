@@ -87,3 +87,26 @@
     width: 0px;
     justify-self: center;
 }
+
+@media(max-width:768px) {
+    .profile-shell {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:400px) {
+    .profile-link-row {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .share-profile-cta {
+        margin-left: 0;
+    }
+
+    .decorative-dot {
+        display: none;
+    }
+}
