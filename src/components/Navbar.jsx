@@ -7,7 +7,7 @@ function Navbar() {
     <header>
       <div className="header-left">
         <div className="app-logo">
-          <Link href="/" className="logo-icon">
+          <Link to="/" className="logo-icon">
             <CodeXml />
           </Link>
           <span>GitHub Explorer</span>

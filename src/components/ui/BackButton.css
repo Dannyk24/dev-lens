@@ -8,7 +8,7 @@
 
 .back-button span {
     transition: var(--general-transition);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .back-button:hover span {

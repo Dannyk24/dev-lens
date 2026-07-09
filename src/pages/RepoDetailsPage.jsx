@@ -1,5 +1,13 @@
+import Navbar from "../components/Navbar";
+import BackButton from "../components/ui/BackButton";
+
 function RepoDetailsPage() {
-  return <div className="repo-page">Repo Page</div>;
+  return (
+    <>
+      <Navbar />
+      <BackButton />
+    </>
+  );
 }
 
 export default RepoDetailsPage;
