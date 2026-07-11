@@ -5,12 +5,7 @@ import "./BackButton.css";
 function BackButton() {
   const navigate = useNavigate();
   return (
-    <div
-      className="back-button"
-      onClick={() => {
-        navigate(-1);
-      }}
-    >
+    <div className="back-button" onClick={() => navigate(-1)}>
       <ChevronLeft />
       <span>Back</span>
     </div>

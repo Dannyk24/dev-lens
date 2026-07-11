@@ -1,0 +1,11 @@
+#search-filter-input {
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: var(--general-transition);
+}
+
+#search-filter-input:hover {
+    background-color: var(--bg-muted);
+}

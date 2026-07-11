@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 6px;
 }
 
 .repo-name-container {
@@ -21,6 +22,14 @@
     align-items: center;
     gap: 5px;
     font-weight: 600;
+    width: 60%;
+}
+
+.repo-name-container span {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .repo-name-container svg {
@@ -39,12 +48,21 @@
     border: 1px solid var(--border);
     color: var(--text-2);
     font-weight: 500;
+    width: fit-content;
 }
+
+.repo-language-container span {
+    max-width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 
 .language-dot-marker {
     width: 8px;
     height: 8px;
-    background-color: purple;
+    background-color: rgb(0, 100, 128);
     border-radius: 3000px;
 }
 
@@ -53,7 +71,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    line-clamp: all;
+    overflow: hidden;
     color: var(--text-2);
     max-width: 90%;
     line-height: 26px;
@@ -66,6 +84,23 @@
     font-size: 0.8rem;
     color: var(--text-3);
     font-weight: 500;
+}
+
+@media(max-width:550px) {
+    .repo-top {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .repo-name-container {
+        width: 100%;
+    }
+
+    .repo-data-container {
+        justify-content: start;
+        gap: 8px;
+    }
 }
 
 .repo-data-container .left {
@@ -83,4 +118,28 @@
 .repo-data svg {
     width: 14px;
     stroke: var(--text-3);
+}
+
+.typescript-language-dot-marker {
+    background-color: purple;
+}
+
+.javascript-language-dot-marker {
+    background-color: rgb(138, 127, 12);
+}
+
+.swift-language-dot-marker {
+    background-color: rgb(188, 86, 9);
+}
+
+.css-language-dot-marker {
+    background-color: purple;
+}
+
+.python-language-dot-marker {
+    background-color: rgb(201, 189, 24);
+}
+
+.java-language-dot-marker {
+    background-color: rgb(236, 64, 6);
 }
