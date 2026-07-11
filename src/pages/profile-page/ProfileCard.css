@@ -58,10 +58,30 @@
 .profile-data a {
     color: var(--accent);
     font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .profile-stats-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.stat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-value {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.stat-category {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: var(--text-3);
+    font-weight: 500;
 }

@@ -97,9 +97,7 @@ function RepoDetailsPage() {
         <div className="decorative-line"></div>
         <section id="related-repos">
           <div className="section-header-sm">Related repositories</div>
-          <div className="related-repos-grid">
-            <RepoCard />
-          </div>
+          <div className="related-repos-grid"></div>
         </section>
       </div>
     </>

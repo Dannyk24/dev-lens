@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/repository/:repoId" element={<RepoDetailsPage />} />
-      <Route path="/profile/:profileId" element={<ProfilePage />} />
+      <Route path="/profile/:username" element={<ProfilePage />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

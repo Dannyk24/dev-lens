@@ -42,7 +42,7 @@ function HomePage() {
         setSearchResults(results);
       } catch (error) {
         console.log(error);
-        setSearchResults([]);
+        setSearchResults(null);
       } finally {
         setIsLoading(false);
       }

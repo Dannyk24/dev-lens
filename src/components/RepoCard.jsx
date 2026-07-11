@@ -4,7 +4,7 @@ import { formatNumber } from "../utils/numbers";
 import { getRelativeTime } from "../utils/time";
 
 function RepoCard({ repository }) {
-  const repoLanguage = repository.language?.toLowerCase();
+  const repoLanguage = repository?.language?.toLowerCase();
   return (
     <div className="repository-card display-card">
       <div className="repo-top">
