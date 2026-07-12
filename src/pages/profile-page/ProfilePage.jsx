@@ -5,7 +5,7 @@ import ProfileCard from "./ProfileCard";
 import ProfileOverviewTab from "./ProfileOverviewTab";
 import "./ProfilePage.css";
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { fetchDeveloper } from "../../api/githubServices";
 import dayjs from "dayjs";
 import ProfileReposTab from "./ProfileReposTab";
@@ -19,27 +19,30 @@ function ProfilePage() {
   const [isError, setIsError] = useState(false);
 
   const { username } = useParams();
-  async function getDeveloper() {
-    setIsError(false);
-    setIsLoading(true);
-    try {
-      const developer = await fetchDeveloper(username);
-      setDeveloper(developer);
-    } catch (error) {
-      setIsError(true);
-      setIsLoading(false);
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  }
+  const getDeveloper = useCallback(
+    async function () {
+      setIsError(false);
+      setIsLoading(true);
+      try {
+        const data = await fetchDeveloper(username);
+        setDeveloper(data);
+      } catch (error) {
+        setIsError(true);
+        setIsLoading(false);
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [username],
+  );
 
   useEffect(() => {
     async function loadDeveloper() {
       await getDeveloper();
     }
     loadDeveloper();
-  }, [username]);
+  }, [getDeveloper]);
 
   function renderActiveTab() {
     if (activeTab === "overview") {
@@ -76,7 +79,7 @@ function ProfilePage() {
                 <Dot />
               </div>
               <span className="year-joined">
-                Joined {dayjs(developer?.createdAt).format("YYYY")}
+                Joined {developer && dayjs(developer?.createdAt).format("YYYY")}
               </span>
             </div>
             <div className="profile-tabs-container">

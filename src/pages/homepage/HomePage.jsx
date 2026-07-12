@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import { SearchBar } from "./SearchBar";
 import Pagination from "./Pagination";
 import "./HomePage.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fetchDevelopers, fetchRepositories } from "../../api/githubServices";
 import RepoCard from "../../components/RepoCard";
 import DeveloperCard from "../../components/DeveloperCard";
@@ -15,6 +15,7 @@ function HomePage() {
   const [searchFilter, setSearchFilter] = useState("developers");
   const [activePage, setActivePage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
+  const searchResultsElemRef = useRef(null);
 
   let totalCount =
     searchFilter === "developers"
@@ -46,7 +47,7 @@ function HomePage() {
       } finally {
         setIsLoading(false);
       }
-    }, 1000);
+    }, 600);
 
     return () => {
       clearTimeout(timeoutId);
@@ -69,7 +70,11 @@ function HomePage() {
         return "No search results for this query";
       }
       return searchResults.repositories.data.map((repository) => (
-        <RepoCard repository={repository} key={repository.id} />
+        <RepoCard
+          repository={repository}
+          key={repository.id}
+          owner={repository.owner}
+        />
       ));
     }
   }
@@ -92,6 +97,8 @@ function HomePage() {
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
             setActivePage={setActivePage}
+            isLoading={isLoading}
+            searchResultsElemRef={searchResultsElemRef}
           />
         </div>
         <div className="search-results-section">
@@ -101,7 +108,7 @@ function HomePage() {
             setSearchFilter={setSearchFilter}
             searchFilter={searchFilter}
           />
-          <div className="search-results-grid">
+          <div className="search-results-grid" ref={searchResultsElemRef}>
             {isLoading
               ? [
                   <DeveloperCardSkeleton key={1} />,

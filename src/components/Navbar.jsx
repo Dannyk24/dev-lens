@@ -1,5 +1,6 @@
 import { CodeXml, Moon, ExternalLink } from "lucide-react";
 import { Link } from "react-router";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -16,6 +17,7 @@ function Navbar() {
       <div className="header-right">
         <div className="header-icon">
           <Moon />
+          <div className="tooltip">dark mode coming soon</div>
         </div>
         <a
           className="header-icon"

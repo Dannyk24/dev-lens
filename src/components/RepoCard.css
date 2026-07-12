@@ -4,6 +4,7 @@
     gap: 15px;
     width: 100%;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .repository-card:hover {
@@ -30,6 +31,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: var(--text-1);
 }
 
 .repo-name-container svg {
@@ -120,26 +122,82 @@
     stroke: var(--text-3);
 }
 
-.typescript-language-dot-marker {
-    background-color: purple;
-}
-
 .javascript-language-dot-marker {
-    background-color: rgb(138, 127, 12);
+    background-color: #f7df1e;
 }
 
-.swift-language-dot-marker {
-    background-color: rgb(188, 86, 9);
-}
-
-.css-language-dot-marker {
-    background-color: purple;
+.typescript-language-dot-marker {
+    background-color: #3178c6;
 }
 
 .python-language-dot-marker {
-    background-color: rgb(201, 189, 24);
+    background-color: #3776ab;
 }
 
 .java-language-dot-marker {
-    background-color: rgb(236, 64, 6);
+    background-color: #ed8b00;
+}
+
+.c-language-dot-marker {
+    background-color: #555555;
+}
+
+.cpp-language-dot-marker {
+    background-color: #00599c;
+}
+
+.csharp-language-dot-marker {
+    background-color: #68217a;
+}
+
+.php-language-dot-marker {
+    background-color: #777bb4;
+}
+
+.ruby-language-dot-marker {
+    background-color: #cc342d;
+}
+
+.go-language-dot-marker {
+    background-color: #00add8;
+}
+
+.rust-language-dot-marker {
+    background-color: #dea584;
+}
+
+.swift-language-dot-marker {
+    background-color: #fa7343;
+}
+
+.kotlin-language-dot-marker {
+    background-color: #7f52ff;
+}
+
+.dart-language-dot-marker {
+    background-color: #0175c2;
+}
+
+.scala-language-dot-marker {
+    background-color: #dc322f;
+}
+
+.shell-language-dot-marker {
+    background-color: #89e051;
+}
+
+.html-language-dot-marker {
+    background-color: #e34f26;
+}
+
+.css-language-dot-marker {
+    background-color: #1572b6;
+}
+
+.lua-language-dot-marker {
+    background-color: #000080;
+}
+
+.r-language-dot-marker {
+    background-color: #276dc3;
 }

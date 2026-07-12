@@ -1,14 +1,18 @@
 import { Shield } from "lucide-react";
 import "./RepoLicense.css";
 
-function RepoLicense() {
+function RepoLicense({ repository }) {
   return (
     <div className="repo-license-container">
       <div className="card-header">License</div>
-      <div className="license-container">
-        <Shield />
-        <span>MIT License</span>
-      </div>
+      {repository.license ? (
+        <div className="license-container">
+          <Shield />
+          <span>{repository.license.name}</span>
+        </div>
+      ) : (
+        "No License available"
+      )}
     </div>
   );
 }

@@ -108,3 +108,80 @@ async function fetchDeveloperRepos(username) {
   });
   return results;
 }
+
+export async function fetchRepository(owner, repo) {
+  const [repoDetails, repoContributors, repoReadme] = await Promise.all([
+    fetchRepoDetails(owner, repo),
+    fetchRepoContributors(owner, repo),
+    fetchRepoReadme(owner, repo),
+  ]);
+
+  return {
+    owner: {
+      username: repoDetails.owner.login,
+      avatar: repoDetails.owner.avatar_url,
+    },
+    id: repoDetails.id,
+    name: repoDetails.name,
+    description: repoDetails.description,
+    language: repoDetails.language,
+    forks: repoDetails.forks,
+    stars: repoDetails.stargazers_count,
+    createdAt: repoDetails.created_at,
+    updatedAt: repoDetails.updated_at,
+    topics: repoDetails.topics,
+    watchers: repoDetails.watchers,
+    issues: repoDetails.open_issues_count,
+    license: repoDetails.license,
+    contributors: repoContributors,
+    readme: repoReadme,
+  };
+}
+
+async function fetchRepoDetails(owner, repo) {
+  const { data } = await githubApi.get(`/repos/${owner}/${repo}`);
+  return data;
+}
+
+async function fetchRepoContributors(owner, repo) {
+  const { data } = await githubApi.get(`/repos/${owner}/${repo}/contributors`);
+  const results = data.map((contributor) => {
+    return {
+      id: contributor.id,
+      name: contributor.login,
+      avatar: contributor.avatar_url,
+      contributions: contributor.contributions,
+    };
+  });
+  return results;
+}
+
+async function fetchRepoReadme(owner, repo) {
+  try {
+    const { data } = await githubApi.get(`/repos/${owner}/${repo}/readme`);
+
+    return data;
+  } catch (error) {
+    if (error.response?.status === 404) {
+      return null; // No README isn't really an error
+    }
+    throw error;
+  }
+}
+
+export async function fetchRelatedRepos(topic) {
+  const { data } = await githubApi.get(`/search/repositories?q=topic:${topic}`);
+  const results = data.items.map((repository) => {
+    return {
+      id: repository.id,
+      name: repository.name,
+      description: repository.description,
+      language: repository.language,
+      owner: repository.owner.login,
+      forks: repository.forks,
+      stars: repository.stargazers_count,
+      updatedAt: repository.updated_at,
+    };
+  });
+  return results;
+}

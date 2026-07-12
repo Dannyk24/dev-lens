@@ -1,11 +1,28 @@
 import { Search } from "lucide-react";
 import "./SearchBar.css";
+import { useEffect } from "react";
 
-export function SearchBar({ searchQuery, setSearchQuery, setActivePage }) {
-  function handleSearch(inputText) {
-    const query = inputText;
+export function SearchBar({
+  searchQuery,
+  setSearchQuery,
+  setActivePage,
+  isLoading,
+  searchResultsElemRef,
+}) {
+  function handleSearch(query) {
     setSearchQuery(query);
     setActivePage(1);
+  }
+
+  function manualSearch() {
+    const searchResultsGrid = searchResultsElemRef.current;
+    searchResultsGrid.scrollIntoView({
+      behavior: "smooth",
+    });
+    if (isLoading) {
+      return;
+    }
+    handleSearch(searchQuery);
   }
 
   return (
@@ -21,7 +38,12 @@ export function SearchBar({ searchQuery, setSearchQuery, setActivePage }) {
           handleSearch(e.target.value);
         }}
       />
-      <button className="cta primary-cta main-app-search-cta">Search</button>
+      <button
+        className="cta primary-cta main-app-search-cta"
+        onClick={manualSearch}
+      >
+        Search
+      </button>
     </div>
   );
 }

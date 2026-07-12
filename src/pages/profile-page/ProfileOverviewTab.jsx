@@ -9,7 +9,6 @@ function ProfileOverviewTab({ developer, repos }) {
     .slice() //Slice so your not directly modifying the developers repos
     .sort((a, b) => b.stars - a.stars)
     .slice(0, 1)[0]; //[0] cause .slice returns an array
-
   return (
     <div className="profile-overview-tab">
       <div className="stat-display-cards-container">
@@ -48,7 +47,7 @@ function ProfileOverviewTab({ developer, repos }) {
       <section id="most-starred-repo">
         <div className="section-header-sm">Most starred repository</div>
         {repos.length > 0 ? (
-          <RepoCard repository={mostStarredRepo} />
+          <RepoCard repository={mostStarredRepo} owner={developer.username} />
         ) : (
           "No starred repositories available"
         )}
@@ -63,7 +62,11 @@ function ProfileOverviewTab({ developer, repos }) {
                     dayjs(b.updatedAt).valueOf() - dayjs(a.updatedAt).valueOf(),
                 )
                 .map((repository) => (
-                  <RepoCard repository={repository} key={repository.id} />
+                  <RepoCard
+                    repository={repository}
+                    key={repository.id}
+                    owner={repository.owner}
+                  />
                 ))
             : "No recent repositories available"}
         </div>

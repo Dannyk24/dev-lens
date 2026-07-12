@@ -62,6 +62,7 @@ header {
     border-radius: var(--radius-sm);
     background-color: var(--bg-subtle);
     transition: var(--general-transition);
+    position: relative;
 }
 
 .header-icon svg {
@@ -69,9 +70,31 @@ header {
     stroke: var(--text-2);
 }
 
+.header-icon .tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: -100px;
+    font-size: 0.65rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    text-transform: capitalize;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
 .header-icon:hover {
     border: 1px solid var(--accent);
     cursor: pointer;
+}
+
+.header-icon:hover .tooltip {
+    opacity: 1;
 }
 
 .header-icon:hover svg {

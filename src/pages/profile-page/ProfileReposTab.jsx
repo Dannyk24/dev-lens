@@ -11,7 +11,11 @@ function ProfileReposTab({ repos, sort }) {
                 .slice() //slice so you dont directly modify the developers repos
                 .sort((a, b) => b.stars - a.stars)
                 .map((repository) => (
-                  <RepoCard repository={repository} key={repository.id} />
+                  <RepoCard
+                    repository={repository}
+                    key={repository.id}
+                    owner={repository.owner}
+                  />
                 ))
             : "No repositories available"}
         </div>
@@ -24,7 +28,11 @@ function ProfileReposTab({ repos, sort }) {
       <div className="repos-grid">
         {repos.length > 0
           ? repos.map((repository) => (
-              <RepoCard repository={repository} key={repository.id} />
+              <RepoCard
+                repository={repository}
+                key={repository.id}
+                owner={repository.owner}
+              />
             ))
           : "No repositories available"}
       </div>

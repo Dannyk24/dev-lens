@@ -2,11 +2,16 @@ import { Book, Star, GitFork } from "lucide-react";
 import "./RepoCard.css";
 import { formatNumber } from "../utils/numbers";
 import { getRelativeTime } from "../utils/time";
+import { Link } from "react-router";
 
-function RepoCard({ repository }) {
+function RepoCard({ repository, owner }) {
   const repoLanguage = repository?.language?.toLowerCase();
+
   return (
-    <div className="repository-card display-card">
+    <Link
+      className="repository-card display-card"
+      to={`/repository/${owner}/${repository.name}`}
+    >
       <div className="repo-top">
         <div className="repo-name-container">
           <Book />
@@ -42,7 +47,7 @@ function RepoCard({ repository }) {
           <span>Updated {getRelativeTime(repository.updatedAt)}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
