@@ -1,11 +1,11 @@
 import { Book } from "lucide-react";
-import "./RepoReadme.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "github-markdown-css/github-markdown.css";
 import "highlight.js/styles/github-dark.css";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight";
+import "./RepoReadme.css";
+import "github-markdown-css/github-markdown.css";
 
 function RepoReadme({ readme }) {
   //Readme decoding logic

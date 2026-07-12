@@ -1,21 +1,31 @@
 .readme-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    max-height: 500px;
+
     border: 1px solid var(--border);
     border-radius: 20px;
     overflow: hidden;
-    height: 100%;
-    max-height: 500px;
+
+    min-width: 0;
 }
 
 .readme-header-container {
     display: flex;
     align-items: center;
     gap: 6px;
-    width: 100%;
-    background-color: var(--bg-muted);
-    padding: 10px 20px;
+
+    padding: 12px 20px;
+
+    background: var(--bg-muted);
+
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-2);
+
+    flex-shrink: 0;
 }
 
 .readme-header-container svg {
@@ -24,23 +34,93 @@
 }
 
 .repo-readme {
-    line-height: 32px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-2);
-    overflow-y: scroll;
-    height: 90%;
+    flex: 1;
+
+    overflow: auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    -webkit-overflow-scrolling: touch;
 }
 
 .markdown-body {
-    padding: 50px 30px;
+    width: 100%;
+    min-width: 0;
+
+    padding: 2rem;
 }
 
-.repo-readme::-webkit-scrollbar {
-    width: 6px;
+/* ---------- Images ---------- */
+
+.markdown-body img {
+    max-width: 100%;
+    height: auto;
 }
 
-.repo-readme::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
-    border-radius: 0px 10px 10px 0px;
+/* ---------- Tables ---------- */
+
+.markdown-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* ---------- Code blocks ---------- */
+
+.markdown-body pre {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.markdown-body pre code,
+.markdown-body pre code.hljs {
+    display: block;
+
+    width: max-content;
+    min-width: 100%;
+
+    white-space: pre;
+}
+
+/* ---------- Long links ---------- */
+
+.markdown-body a {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+    .markdown-body {
+        padding: 1.25rem;
+    }
+
+    .markdown-body h1 {
+        font-size: 1.8rem;
+    }
+
+    .markdown-body h2 {
+        font-size: 1.5rem;
+    }
+
+    .markdown-body h3 {
+        font-size: 1.25rem;
+    }
+
+    .markdown-body pre {
+        font-size: 0.85rem;
+    }
+
+    .markdown-body table {
+        font-size: 0.9rem;
+    }
 }
