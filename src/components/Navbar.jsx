@@ -11,7 +11,7 @@ function Navbar() {
           <Link to="/" className="logo-icon">
             <CodeXml />
           </Link>
-          <span>GitHub Explorer</span>
+          <span>DevLens</span>
         </div>
       </div>
       <div className="header-right">
